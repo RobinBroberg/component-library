@@ -7,6 +7,8 @@ function Modal({ show, onClose, size = "medium", children }) {
     large: "max-w-2xl",
   };
 
+  const selectedSize = sizeClasses[size];
+
   if (!show) return null;
 
   return (
@@ -15,7 +17,7 @@ function Modal({ show, onClose, size = "medium", children }) {
       onClick={onClose}
     >
       <div
-        className={`bg-white border border-gray-700 rounded-lg p-4 w-full ${sizeClasses[size]}`}
+        className={`bg-white border border-gray-700 rounded-lg p-4 w-full ${selectedSize}`}
         onClick={(e) => e.stopPropagation()}
       >
         {children}
