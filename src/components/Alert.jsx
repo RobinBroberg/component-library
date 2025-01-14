@@ -4,11 +4,11 @@ import { CiCircleAlert } from "react-icons/ci";
 import { CiSquareAlert } from "react-icons/ci";
 import { TbAlertTriangle } from "react-icons/tb";
 
-export default function CustomAlert({
+export default function Alert({
   color,
   icon,
   children,
-  className,
+  className = "",
   iconSize = "medium",
   iconColor,
 }) {

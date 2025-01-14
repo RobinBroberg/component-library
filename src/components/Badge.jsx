@@ -4,7 +4,7 @@ import { FaRegClock } from "react-icons/fa6";
 import { IoMdCheckmark } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 
-export default function CustomBadge({
+export default function Badge({
   color = "gray",
   icon,
   size = "medium",
