@@ -12,13 +12,16 @@ export default function Button({
     red: `bg-red-400 border-red-700 ${!disabled ? "hover:bg-red-500" : ""}`,
     blue: `bg-blue-400 border-blue-700 ${!disabled ? "hover:bg-blue-500" : ""}`,
     gray: `bg-gray-400 border-gray-700 ${!disabled ? "hover:bg-gray-500" : ""}`,
+    green: `bg-green-400 border-green-700 ${
+      !disabled ? "hover:bg-green-500" : ""
+    }`,
   };
   const selectedColor = colorMapping[color];
 
   const sizeMapping = {
-    large: "py-3 px-5",
-    medium: "py-2 px-4",
-    small: "py-1 px-3",
+    large: "py-3 px-6",
+    medium: "py-2 px-5",
+    small: "py-1 px-4",
   };
 
   const selectedSize = sizeMapping[size];

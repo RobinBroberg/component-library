@@ -58,6 +58,14 @@ function App() {
       <Button onClick={() => setColor("gray")} size="small" className="m-5">
         Gray
       </Button>
+      <Button
+        onClick={() => setColor("green")}
+        color="green"
+        size="small"
+        className="m-5"
+      >
+        Green
+      </Button>
       <hr />
       <h1 className="font-semibold text-2xl my-5">Badges</h1>
       <Badge icon="clock" size="small" className="mr-2">
@@ -125,7 +133,7 @@ function App() {
         </Modal.Body>
         <Modal.Footer>
           <Button
-            color="gray"
+            color="red"
             size="small"
             onClick={() => setIsModalOpen(false)}
           >

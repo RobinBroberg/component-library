@@ -16,6 +16,7 @@ export default function Alert({
     red: "bg-red-400 border-red-700",
     blue: "bg-blue-400 border-blue-700",
     gray: "bg-gray-400 border-gray-700",
+    green: "bg-green-400 border-green-700",
   };
   const selectedColor = colorMapping[color];
 
