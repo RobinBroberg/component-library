@@ -1,10 +1,13 @@
 import "./App.css";
+import { useState } from "react";
 import CustomAlert from "./components/CustomAlert";
 import CustomBadge from "./components/CustomBadge";
 import CustomButton from "./components/CustomButton";
 import CustomCard from "./components/CustomCard";
 
 function App() {
+  const [color, setColor] = useState("gray");
+
   return (
     <>
       <h1 className="font-semibold text-2xl mb-5">Buttons</h1>
@@ -32,13 +35,36 @@ function App() {
       </CustomAlert>
       <CustomAlert
         icon="square"
-        color="gray"
+        color={color}
         iconSize="small"
         iconColor="text-red-600"
         className="my-2 text-red-800"
       >
-        Info alert! Warning, warning, warning...
+        Try changing color with the buttons.
       </CustomAlert>
+      <CustomButton
+        onClick={() => setColor("blue")}
+        size="small"
+        className="m-5"
+        color="blue"
+      >
+        Blue
+      </CustomButton>
+      <CustomButton
+        onClick={() => setColor("red")}
+        size="small"
+        className="m-5"
+        color="red"
+      >
+        Red
+      </CustomButton>
+      <CustomButton
+        onClick={() => setColor("gray")}
+        size="small"
+        className="m-5"
+      >
+        Gray
+      </CustomButton>
       <hr />
       <h1 className="font-semibold text-2xl my-5">Badges</h1>
       <CustomBadge icon="clock" size="small" className="mr-2">
@@ -52,7 +78,7 @@ function App() {
       </CustomBadge>
       <hr />
       <h1 className="font-semibold text-2xl my-5">Cards</h1>
-      <div className="p-4 grid gap-6 grid-cols-3">
+      <div className="p-4 grid grid-cols-3 ml-5">
         <CustomCard
           href="#"
           imgSrc="https://picsum.photos/id/237/400/300"
@@ -70,15 +96,19 @@ function App() {
           imgAlt="Placeholder Image"
         >
           <h3 className="text-lg font-bold">Another Card</h3>
-          <p className="text-sm text-gray-600">More details about this card.</p>
+          <p className="text-sm text-gray-600">
+            This is an example card description.
+          </p>
         </CustomCard>
         <CustomCard
           href="#"
           imgSrc="https://picsum.photos/400/300?grayscale"
           imgAlt="Placeholder Image"
         >
-          <h3 className="text-lg font-bold">Another Card</h3>
-          <p className="text-sm text-gray-600">More details about this card.</p>
+          <h3 className="text-lg font-bold">And another Card</h3>
+          <p className="text-sm text-gray-600">
+            This is an example card description.
+          </p>
         </CustomCard>
       </div>
     </>

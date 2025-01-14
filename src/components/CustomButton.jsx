@@ -6,6 +6,7 @@ export default function CustomButton({
   disabled,
   children,
   className = "",
+  onClick,
 }) {
   let selectedColor;
   if (color === "red") {
@@ -29,5 +30,9 @@ export default function CustomButton({
     disabled ? "opacity-75 cursor-default" : ""
   } ${className}`;
 
-  return <button className={combinedClassName}>{children}</button>;
+  return (
+    <button onClick={onClick} className={combinedClassName}>
+      {children}
+    </button>
+  );
 }
